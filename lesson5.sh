@@ -9,7 +9,13 @@
 
 while :
 do
-read -p 'Write a number or press ctrl+c to stop: ' count
+#read -p 'Write a number or press ctrl+c to stop: ' count
+
+unset count
+while [ -z "$count" ]
+do
+  read -p 'Write a number or press ctrl+c to stop: ' count
+done
 
 if [ $count -gt 0 ]
 then
